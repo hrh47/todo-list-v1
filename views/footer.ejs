@@ -1,0 +1,56 @@
+  <script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+  <script id="todo-template" type="text/x-handlebars-template">
+    <div class="todo-item card" data-id="{{_id}}">
+      <a class="done-btn">
+        {{#if isDone}}
+          <i class="material-icons left">check_box</i>
+        {{else}}
+          <i class="material-icons left">check_box_outline_blank</i>
+        {{/if}}
+      </a>
+      <span class="todo-body{{#if isDone}} done{{/if}}">{{body}}</span>
+      <span class="edit-btns right hide">
+        <a class="edit-btn"><i class="material-icons left">mode_edit</i></a>
+        <a class="delete-btn"><i class="material-icons left">clear</i></a>
+      </span>
+    </div>
+  </script>
+  <script id="edit-input-template" type="text/x-handlebars-template">
+    <input type="text" name="edit-input">
+  </script>
+  <script id="tabs-template" type="text/x-handlebars-template">
+    <div class="col l9 m12 s12">
+      <ul class="tabs">
+        <li class="tab col m4 s12">
+          <a id="tab-all" class="active blue-text" href="#">
+            全部 <small class="grey-text" id="count-all"></small>
+          </a>
+        </li>
+        <li class="tab col m4 s12">
+          <a id="tab-active" class="blue-text" href="#">
+            未完成 <small class="grey-text" id="count-active"></small>
+          </a>
+        </li>
+        <li class="tab col m4 s12">
+          <a id="tab-done" class="blue-text" href="#">
+            已完成 <small class="grey-text" id="count-done"></small>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+      <a id="clear-btn" class="btn red right"><i class="material-icons left">clear_all</i>Clear</a>
+    </div>
+  </script>
+  <script src="js/index.js"></script>
+  <% if (success || error) { %>
+    <script>M.toast({html: '<%= success || error %>'})</script>
+  <% } %>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+body {
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.tab a {
+  text-transform: none;
+}
+.tab a:focus.active {
+  background-color: transparent !important;
+}
+
+.btn {
+  text-transform: none;
+}
+
+.todo-item {
+  padding: 1.8rem 1.5rem;
+  font-size: 16px;
+}
+.todo-item i {
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #d5d5d5;
+}
+
+#signup, #signin {
+  margin-top: 8rem;
+}
+
+input[name=username]:focus,
+input[name=password]:focus,
+input[name=repassword]:focus {
+  border-bottom: 1px solid #F44336 !important;
+  box-shadow: 0 1px 0 0 #F44336 !important;
+}
+
+span.badge.new:after {
+  content: "" !important;
+}
+

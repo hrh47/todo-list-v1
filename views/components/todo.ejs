@@ -1,0 +1,14 @@
+<div class="todo-item card" data-id="<%= todo._id %>">
+  <a class="done-btn">
+    <% if (todo.isDone) { %>
+    <i class="material-icons left">check_box</i>
+    <% } else { %>
+    <i class="material-icons left">check_box_outline_blank</i>
+    <% } %>
+  </a>
+  <span class="todo-body<% if(todo.isDone) {%> done<% } %>"><%= todo.body %></span>
+  <span class="edit-btns right hide">
+    <a class="edit-btn"><i class="material-icons left">mode_edit</i></a>
+    <a class="delete-btn"><i class="material-icons left">clear</i></a>
+  </span>
+</div>

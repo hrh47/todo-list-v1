@@ -1,0 +1,24 @@
+<%- include('header') %>
+
+<div class="container" id="signup">
+  <div class="row">
+    <h4 class="center red-text">註冊</h4>
+    <form method="POST" action="/signup" class="col s8 push-s2 m8 push-m2 xl6 push-xl3">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="col s12 m12">
+        <div class="input-field">
+          <input name="username" type="text" placeholder="帳號" autofocus>
+        </div>
+        <div class="input-field">
+          <input name="password" type="password" placeholder="密碼">
+        </div>
+        <div class="input-field">
+          <input name="repassword" type="password" placeholder="再次輸入密碼">
+        </div>
+        <input type="submit" class="btn red right" value="註冊">
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('footer') %>

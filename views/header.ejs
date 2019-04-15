@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="csrf_token" content="<%= csrfToken %>">
+  <title>Todoism</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="green lighten-2">
+    <div class="nav-wrapper">
+      <div class="container">
+          <a href="/" class="brand-logo">Todoism</a>
+          <a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <% if (user) { %>
+              <li>
+                <a class="waves-effect waves-light btn orange" onclick="return false;">
+                    <%= user.username %>
+                  <span class="badge new"><span id="nav-count-active"></span> 個待辦事項</span>
+                </a>
+              </li>
+              <li><a href="#" id="logout-button">登出</a></li>
+            <% } else { %>
+              <li><a href="/signin">登入</a></li>
+              <li><a href="/signup">註冊</a></li>
+            <% } %>
+          </ul>
+          <ul class="sidenav" id="sidenav">
+            <% if (user) { %>
+              <li><a href="#" id="logout-button">登出</a></li>
+            <% } else { %>
+              <li><a href="/signin">登入</a></li>
+              <li><a href="/signup">註冊</a></li>
+            <% } %>
+          </ul>
+      </div>
+
+    </div>
+  </nav>

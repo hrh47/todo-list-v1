@@ -1,0 +1,47 @@
+<%- include('header') %>
+
+<div class="container main">
+  <div class="row">
+    <div class="col s12 input-field">
+      <input type="text" name="todo" placeholder="要做些什麼？" autofocus>
+    </div>
+  </div>
+  <div class="row" id="tabs">
+    <% if (todos && todos.length > 0) { %>
+    <div class="col l9 m12 s12">
+      <ul class="tabs">
+        <li class="tab col m4 s12">
+          <a id="tab-all" class="active blue-text" href="#">
+            全部 <small class="grey-text" id="count-all"></small>
+          </a>
+        </li>
+        <li class="tab col m4 s12">
+          <a id="tab-active" class="blue-text" href="#">
+            未完成 <small class="grey-text" id="count-active"></small>
+          </a>
+        </li>
+        <li class="tab col m4 s12">
+          <a id="tab-done" class="blue-text" href="#">
+            已完成 <small class="grey-text" id="count-done"></small>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+      <a id="clear-btn" class="btn red right"><i class="material-icons left">clear_all</i>清除</a>
+    </div>
+    <% } %>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <div id="todo-list">
+        <% for (let todo of todos) { %>
+        <%- include('components/todo', {todo: todo}) %>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('footer') %>
