@@ -23,4 +23,9 @@ module.exports = function(app) {
   app.use('/signin', require('./signin'));
   app.use('/signout', require('./signout'));
   app.use('/todos', require('./todos'));
+  app.use(function(req, res, next) {
+    if (!res.headerSent) {
+      res.status(404).render('404');
+    }
+  })
 }
