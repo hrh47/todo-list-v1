@@ -11,34 +11,4 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="green lighten-2">
-    <div class="nav-wrapper">
-      <div class="container">
-          <a href="/" class="brand-logo">Todoism</a>
-          <a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <% if (user) { %>
-              <li>
-                <a class="waves-effect waves-light btn orange" onclick="return false;">
-                    <%= user.username %>
-                  <span class="badge new"><span id="nav-count-active"></span> 個待辦事項</span>
-                </a>
-              </li>
-              <li><a href="#" id="logout-button">登出</a></li>
-            <% } else { %>
-              <li><a href="/signin">登入</a></li>
-              <li><a href="/signup">註冊</a></li>
-            <% } %>
-          </ul>
-          <ul class="sidenav" id="sidenav">
-            <% if (user) { %>
-              <li><a href="#" id="logout-button">登出</a></li>
-            <% } else { %>
-              <li><a href="/signin">登入</a></li>
-              <li><a href="/signup">註冊</a></li>
-            <% } %>
-          </ul>
-      </div>
-
-    </div>
-  </nav>
+  
