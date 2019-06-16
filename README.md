@@ -1,6 +1,6 @@
 # Todo List
 
-### [demo](http://134.209.7.22:3000/) 
+### [demo](http://todo-list-v1.andrewhsieh.me/) 
 ### 帳號：test / 密碼：test
 
 ## 如何安裝
@@ -21,3 +21,4 @@
 3. 如何使用 mongodb
 4. 如何使用 materialize css
 5. 如何將網站 deploy 上 VPS
+6. 如何為網站加上 TLS 憑證
