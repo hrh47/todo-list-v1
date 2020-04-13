@@ -12,19 +12,19 @@
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
-    "config-lite": "^2.1.0",
+    "config-lite": "^3.0.0",
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^2.0.3",
+    "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.4",
     "csurf": "^1.10.0",
     "dotenv": "^7.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
-    "lodash": "^4.17.11",
-    "mongolass": "^4.4.2"
+    "lodash": ">=4.17.12",
+    "mongolass": "^4.4.6"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^2.0.3"
   }
 }
