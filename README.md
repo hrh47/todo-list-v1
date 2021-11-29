@@ -1,6 +1,6 @@
 # Todo List
 
-### [demo](http://todo-list-v1.andrewhsieh.me/) 
+### [demo](http://todo-list-v1.andrewhsieh.net/) 
 ### 帳號：test / 密碼：test
 
 ## 如何安裝
